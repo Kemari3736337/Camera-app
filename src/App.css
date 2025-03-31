@@ -1,0 +1,62 @@
+.text-display {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: bold;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.capture-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.loading-indicator::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  border: 0.25rem solid #e5e7eb;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.text-container {
+  transition: all 0.3s ease;
+}
+
+.text-controls button {
+  transition: all 0.2s ease;
+}
+
+.text-controls button:hover {
+  transform: translateY(-2px);
+}
+
+.text-controls button:active {
+  transform: translateY(0);
+}
